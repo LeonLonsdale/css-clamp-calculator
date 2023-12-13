@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script src="scripts.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
+    <title>Clampy</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="heading--main">Clamp Calculator</h1>
+    </header>
+    <main class="main">
+      <section>
+        <article class="data-wrap">
+          <form data-form action="" class="data-form">
+            <input
+              aria-label="Input base text size in pixels"
+              data-rem-value
+              type="number"
+              min="0"
+              step="0.01"
+              id="rem-value"
+              placeholder="Base text size (px)"
+            />
+            <input
+              aria-label="input minimum element size in rem"
+              data-size-min
+              id="min-size"
+              type="number"
+              min="0"
+              step="0.01"
+              data-min-size
+              placeholder="Minimum Size (rem)"
+              required
+            />
+            <input
+              aria-label="input maximum element size in rem"
+              data-size-max
+              type="number"
+              min="0"
+              step="0.01"
+              id="max-size"
+              data-max-size
+              placeholder="Maximum Size (rem)"
+              required
+            />
+            <input
+              aria-label="input minimum viewport width in pixels"
+              id="min-viewport"
+              type="number"
+              min="0"
+              step="0.01"
+              data-vp-min
+              placeholder="Minimum Viewport Width (px)"
+              required
+            />
+            <input
+              aria-label="input maximum viewport width in pixels"
+              type="number"
+              min="0"
+              step="0.01"
+              id="max-viewport"
+              data-vp-max
+              placeholder="Maximum Viewport Width (px)"
+              required
+            />
+            <div class="data-form__buttons">
+              <button
+                aria-label="calculate result"
+                title="Calculate result"
+                type="submit"
+                data-btn-calculate
+                class="btn btn--calculate"
+              >
+                Calculate!
+              </button>
+              <button
+                aria-label="reset form"
+                title="reset form"
+                data-btn-reset
+                class="btn btn--reset"
+              >
+                <svg class="icon--reload"><use href="./assets/sprite.svg#undo"></use></svg>
+              </button>
+            </div>
+          </form>
+          <div class="result">
+            <code aria-label="results" data-result class="result__output"></code>
+            <button aria-label="copy result" title="Copy result" data-copy class="btn btn--copy">
+              <svg class="icon--clipboard"><use href="./assets/sprite.svg#clipboard"></use></svg>
+            </button>
+          </div>
+        </article>
+        <aside class="information">
+          <h2 class="heading--info">What is this?</h2>
+          <p class="information__text">
+            CSS clamp allows you to create responsive elements without the need for media queries.
+            It scales your element between a maximum and minimum size as your viewport changes. It
+            also manages the rate at which this scaling happens.
+          </p>
+          <p class="information__text">
+            This calculator works out the optimum rate of scaling based on your inputs.
+          </p>
+          <p class="information__text">
+            By default, your base text size is 16px, but if you have set your font-size to 62.5%,
+            enter 10.
+          </p>
+        </aside>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="copyright">&copy; Leon Lonsdale 2023</p>
+      <ul class="footer__socials">
+        <li>
+          <a href="https://www.twitter.com/LeonLonsdale" target="_blank">
+            <svg class="icon--footer">
+              <use href="/assets/sprite.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/Sen-Nyin" target="_blank">
+            <svg class="icon--footer">
+              <use href="/assets/sprite.svg#github"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
